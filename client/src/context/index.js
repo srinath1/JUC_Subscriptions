@@ -16,7 +16,8 @@ const UserProvider = ({ children }) => {
 
   // axios config
   const token = state && state.token ? state.token : "";
-  axios.defaults.baseURL = process.env.REACT_APP_API;
+   axios.defaults.baseURL = 'https://myjucsubscriptions.herokuapp.com/api';
+
   axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
   return (
