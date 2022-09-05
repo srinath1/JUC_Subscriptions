@@ -4,8 +4,8 @@
   "description": "The doctor appointment app",
   "main": "index.js",
   "engines": {
-    "node": "16.14.2",
-    "npm": "6.1.0"
+    "node": "15.7.0",
+    "npm": "7.4.3"
   },
   "scripts": {
     "client-install": "npm install --prefix client",
