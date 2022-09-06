@@ -17,7 +17,7 @@ const Register = ({ history }) => {
     // console.log(name, email, password);
     try {
       e.preventDefault();
-      const { data } = await axios.post("/register", {
+      const { data } = await axios.post("https://myjucsubscriptions.herokuapp.com/api/register", {
         name,
         email,
         password,
