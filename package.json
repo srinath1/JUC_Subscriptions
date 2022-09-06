@@ -1,7 +1,7 @@
 {
-  "name": "jucsubscriptions",
+  "name": "jucsubscription",
   "version": "1.0.0",
-  "description": "The subscriptions app",
+  "description": "The subscription app",
   "main": "server.js",
   "engines": {
     "node": "15.7.0",
