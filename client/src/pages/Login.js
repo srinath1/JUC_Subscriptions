@@ -18,7 +18,7 @@ const Login = ({ history }) => {
     // console.log("email and password", email, password);
     try {
       e.preventDefault();
-      const { data } = await axios.post("/login", {
+      const { data } = await axios.post("https://myjucsubscriptions.herokuapp.com/api/login", {
         email,
         password,
       });
