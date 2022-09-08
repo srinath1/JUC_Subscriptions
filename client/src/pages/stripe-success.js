@@ -9,7 +9,7 @@ const StripeSuccess = ({history}) => {
   const [state, setState] = useContext(UserContext);
   useEffect(()=>{
     const getSubscriptions=async()=>{
-      const {data}=await axios.get('/subscription-status')
+      const {data}=await axios.get('https://myjucsubscriptions.herokuapp.com/api/subscription-status')
       console.log('data',data)
       if(data && data.length ===0){
         history.push('/')
