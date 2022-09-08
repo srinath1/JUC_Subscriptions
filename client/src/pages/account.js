@@ -10,7 +10,7 @@ const Account = ({ history }) => {
   useEffect(()=>{
 
     const getSubscriptions=async()=>{
-      const {data}=await axios.get('/subscriptions')
+      const {data}=await axios.get('https://myjucsubscriptions.herokuapp.com/api/subscriptions')
       console.log(data)
       setSubscriptions(data.data)
     }
@@ -18,7 +18,7 @@ const Account = ({ history }) => {
 
   },[state && state.token])
   const manageSubscription=async()=>{
-    const {data}=await axios.get('/customer-portal')
+    const {data}=await axios.get('https://myjucsubscriptions.herokuapp.com/api/customer-portal')
     window.open(data)
 
   }
