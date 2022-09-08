@@ -23,7 +23,7 @@ const Home = ({ history }) => {
   },[])
 
   const fetchPrices = async () => {
-    const { data } = await axios.get("/prices");
+    const { data } = await axios.get("https://myjucsubscriptions.herokuapp.com/api/prices");
     console.log("prices get request", data);
     setPrices(data);
   };
@@ -37,7 +37,7 @@ const Home = ({ history }) => {
       return
      }
     if (state && state.token) {
-      const { data } = await axios.post("/create-subscription", {
+      const { data } = await axios.post("https://myjucsubscriptions.herokuapp.com/api/create-subscription", {
         priceId: price.id,
       });
       window.open(data);
