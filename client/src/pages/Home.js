@@ -36,13 +36,15 @@ const Home = ({ history }) => {
       history.push(`/${price.nickname.toLowerCase()}`)
       return
      }
+    
     if (state && state.token) {
+      const token=state.token
       const { data } = await axios.post("https://myjucsubscriptions.herokuapp.com/api/create-subscription", {
         priceId: price.id,
       },
                                      {
   headers: {
-    Authorization: 'Bearer ' + state.token
+    Authorization: 'Bearer ' + token
   });
       window.open(data);
     } else {
